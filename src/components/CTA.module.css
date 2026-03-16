@@ -1,0 +1,118 @@
+.section {
+  padding: 96px 0;
+  background: var(--color-bg);
+}
+
+.inner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 50%, #a855f7 100%);
+  border-radius: var(--radius-lg);
+  padding: 80px 64px;
+  text-align: center;
+}
+
+.blob {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--color-white);
+  padding: 14px 36px;
+  border-radius: var(--radius-full);
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(255,255,255,0.4);
+  background: transparent;
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+}
+
+.secondaryBtn:hover {
+  border-color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-1px);
+}
+
+.note {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 56px 28px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+}
